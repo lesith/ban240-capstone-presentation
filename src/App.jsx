@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "./components/ui/card";
+import StationLocator from './components/StationLocator';
 import {
   BarChart,
   Bar,
@@ -48,6 +49,7 @@ const COLORS = ["#4F46E5", "#10B981", "#F59E0B", "#EF4444"];
 const Presentation = () => {
   return (
     <div className="w-full space-y-4 p-2 md:space-y-8 md:p-4">
+
       {/* Title Slide - Responsive padding and icon spacing */}
       <Card className="p-4 md:p-8 text-center bg-gradient-to-r from-blue-50 to-indigo-50">
         <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4">Breaking Down Barriers</h1>
@@ -72,6 +74,16 @@ const Presentation = () => {
           </div>
         </div>
       </Card>
+
+      {/* Title Slide - Now with image */}
+      {/* <Card className="p-4 md:p-8 text-center bg-gradient-to-r from-blue-50 to-indigo-50">
+        <img 
+          src="/electric-car.jpg"      // Notice the path starts with /
+          alt="Electric vehicle charging station"
+          className="w-full max-w-3xl mx-auto mb-6 rounded-lg shadow-lg object-cover"
+        />
+        <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4">Charging Stations Across Canada</h1>
+      </Card> */}
 
       {/* Research Problem - Responsive grid */}
       <Card className="p-4 md:p-6">
@@ -228,6 +240,9 @@ const Presentation = () => {
         </div>
       </Card>
 
+      {/* <StationLocator /> */}
+      <StationLocator />
+
       {/* Recommendations - Responsive grid */}
       <Card className="p-4 md:p-6">
         <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Recommendations</h2>
@@ -328,6 +343,7 @@ const Presentation = () => {
           <li>6. Environment and Climate Change Canada (2023)</li>
         </ul>
       </Card>
+
     </div>
   );
 };
