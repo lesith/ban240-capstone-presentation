@@ -301,7 +301,7 @@ const Presentation = () => {
 
       {/* Conclusion */}
       <Card className="p-4 md:p-8 text-center bg-gradient-to-r from-green-50 to-indigo-50">
-        <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4">Conclusion</h1>
+        <h1 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4">Discussion and Conclusion</h1>
         <h2 className="text-xl md:text-2xl mb-2 md:mb-4">
           The Study Reveals
         </h2>
