@@ -33,7 +33,15 @@ import {
   ChartCandlestick,
   Users,
   Wifi,
-  Code
+  Code,
+  Landmark,
+  Factory,
+  UserCheck,
+  Route,
+  Medal,
+  Atom,
+  Database,
+  Activity
 } from "lucide-react";
 
 const provinceData = [
@@ -69,7 +77,7 @@ const Presentation = () => {
           Overcoming Obstacles to EV Ownership in Canada
         </h2>
         <p className="text-lg md:text-xl text-gray-600">
-          Business Analytics Capstone Project
+          Business Analytics Capstone Project - Automobile Industry Group
         </p>
         <div className="mt-4 md:mt-8 flex justify-center space-x-4 md:space-x-8">
           <div className="text-center">
@@ -98,15 +106,15 @@ const Presentation = () => {
               EVs start at CAD 40,000 vs. gasoline vehicles at CAD 16,998
             </p>
           </div>
-          <div className="p-4 bg-yellow-50 rounded-lg">
-            <MapPin className="h-6 w-6 md:h-8 md:w-8 text-yellow-500 mb-2" />
+          <div className="p-4 bg-red-50 rounded-lg">
+            <MapPin className="h-6 w-6 md:h-8 md:w-8 text-red-500 mb-2" />
             <h3 className="font-bold mb-2">Infrastructure Gaps</h3>
             <p className="text-lg">
               Limited charging station availability in many regions
             </p>
           </div>
-          <div className="p-4 bg-blue-50 rounded-lg">
-            <Zap className="h-6 w-6 md:h-8 md:w-8 text-blue-500 mb-2" />
+          <div className="p-4 bg-red-50 rounded-lg">
+            <Zap className="h-6 w-6 md:h-8 md:w-8 text-red-500 mb-2" />
             <h3 className="font-bold mb-2">Service Concerns</h3>
             <p className="text-lg">
               Maintenance and long-term reliability uncertainties
@@ -124,12 +132,17 @@ const Presentation = () => {
             <h3 className="text-lg font-bold mb-3">Mixed-Methods Approach</h3>
               <li className="flex items-center gap-2">
                 <ChevronRight className="text-blue-500" size={40} />
-                <span className="text-lg">Combination of Quantitative and Qualitative methods</span>
+                <span className="text-lg">Quantitative and Qualitative</span>
               </li>
               <h3 className="text-lg font-bold mb-3">Target Population</h3>
               <li className="flex items-center gap-2">
                 <ChevronRight className="text-blue-500" size={40} />
-                <span className="text-lg">Consumers, Industry Stakeholders and the Government</span>
+                <span className="text-lg">Consumers, Industries and the State</span>
+              </li>
+              <h3 className="text-lg font-bold mb-3">Sample</h3>
+              <li className="flex items-center gap-2">
+                <ChevronRight className="text-blue-500" size={40} />
+                <span className="text-lg">Urban and Rural Car Buyers, Gov Bodies</span>
               </li>
             </ul>
           </div>
@@ -172,7 +185,7 @@ const Presentation = () => {
             <Code className="h-6 w-6 md:h-8 md:w-8 text-purple-500 mb-2" />
             <h3 className="font-bold mb-2">Government Data Sources</h3>
             <p className="text-lg">
-              Charging Station API
+              Charging Stations API
             </p>
           </div>
         </div>
@@ -229,7 +242,7 @@ const Presentation = () => {
                   <XAxis dataKey="percentile" />
                   <YAxis />
                   <Tooltip />
-                  <Line type="monotone" dataKey="range" stroke="#10B981" />
+                  <Line type="monotone" dataKey="range" stroke="#10B981" strokeWidth={5} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -312,7 +325,8 @@ const Presentation = () => {
       <Card className="p-4 md:p-6">
         <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">These Can be Addressed by</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="p-4 bg-blue-50 rounded-lg">
+          <div className="p-4 bg-purple-50 rounded-lg">
+          <Landmark className="h-6 w-6 md:h-8 md:w-8 text-purple-500 mb-2" />
             <h3 className="font-bold mb-3">The Government</h3>
             <ul className="space-y-2 text-lg">
               <li>1. Expand charging infrastructure</li>
@@ -320,7 +334,8 @@ const Presentation = () => {
               <li>3. Standardize payment systems</li>
             </ul>
           </div>
-          <div className="p-4 bg-green-50 rounded-lg">
+          <div className="p-4 bg-purple-50 rounded-lg">
+          <Factory className="h-6 w-6 md:h-8 md:w-8 text-purple-500 mb-2" />
             <h3 className="font-bold mb-3">The Manufacturers</h3>
             <ul className="space-y-2 text-lg">
               <li>1. Develop entry and mid-market segments</li>
@@ -328,7 +343,8 @@ const Presentation = () => {
               <li>3. Expand service networks</li>
             </ul>
           </div>
-          <div className="p-4 bg-yellow-50 rounded-lg">
+          <div className="p-4 bg-purple-50 rounded-lg">
+          <UserCheck className="h-6 w-6 md:h-8 md:w-8 text-purple-500 mb-2" />
             <h3 className="font-bold mb-3">The Consumers</h3>
             <ul className="space-y-2 text-lg">
               <li>1. Consider total ownership costs</li>
@@ -365,6 +381,7 @@ const Presentation = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="p-4 bg-purple-50 rounded-lg">
+            <Route className="h-6 w-6 md:h-8 md:w-8 text-purple-500 mb-2" />
             <h3 className="font-bold mb-3">Strategic Planning</h3>
             <ul className="space-y-2 text-lg">
               <li>• Data-driven infrastructure decisions</li>
@@ -372,7 +389,8 @@ const Presentation = () => {
               <li>• Consumer behavior analysis</li>
             </ul>
           </div>
-          <div className="p-4 bg-indigo-50 rounded-lg">
+          <div className="p-4 bg-purple-50 rounded-lg">
+            <Medal className="h-6 w-6 md:h-8 md:w-8 text-purple-500 mb-2" />
             <h3 className="font-bold mb-3">Operational Excellence</h3>
             <ul className="space-y-2 text-lg">
               <li>• Real-time monitoring</li>
@@ -380,7 +398,8 @@ const Presentation = () => {
               <li>• Cost optimization</li>
             </ul>
           </div>
-          <div className="p-4 bg-blue-50 rounded-lg">
+          <div className="p-4 bg-purple-50 rounded-lg">
+            <Atom className="h-6 w-6 md:h-8 md:w-8 text-purple-500 mb-2" />
             <h3 className="font-bold mb-3">Innovation</h3>
             <ul className="space-y-2 text-lg">
               <li>• Machine learning applications</li>
@@ -396,6 +415,7 @@ const Presentation = () => {
         <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Limitations</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <div className="p-4 bg-red-50 rounded-lg">
+            <Database className="h-6 w-6 md:h-8 md:w-8 text-red-500 mb-2" />
             <h3 className="font-bold mb-3">Data Constraints</h3>
             <ul className="space-y-2 text-lg">
               <li>• Limited historical data</li>
@@ -403,7 +423,8 @@ const Presentation = () => {
               <li>• Regional variations</li>
             </ul>
           </div>
-          <div className="p-4 bg-orange-50 rounded-lg">
+          <div className="p-4 bg-red-50 rounded-lg">
+            <Activity className="h-6 w-6 md:h-8 md:w-8 text-red-500 mb-2" />
             <h3 className="font-bold mb-3">Methodological Limitations</h3>
             <ul className="space-y-2 text-lg">
               <li>• Evolving market conditions</li>
@@ -425,6 +446,8 @@ const Presentation = () => {
           <li>4. Clean Energy Canada (2024)</li>
           <li>5. Canadian Automobile Association (2023)</li>
           <li>6. Environment and Climate Change Canada (2023)</li>
+          <li>7. Kijiji Public Listings (2024)</li>
+          <li>8. Plug'n Drive (2024)</li>
         </ul>
       </Card>
 
